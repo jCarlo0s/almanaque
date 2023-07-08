@@ -16,6 +16,8 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Almanaque - Lo mejor de la NBA en un mismo lugar',
   description: 'Los resultados, estadísticas, noticias y más de la NBA en un solo lugar.',
+  keywords: 'nba, almanaque, resultados, estadísticas, noticias, jugadores, equipos, partidos, temporada, 2019, 2020, 2021, 2022, 2023, 2024, 2025',
+  authors: [{ name: 'Almanaque'}],
 }
 
 export default function RootLayout({

@@ -28,7 +28,7 @@ const MatchCard = (matchInfo: MatchCardProps): JSX.Element => {
   }
 
   return (
-    <div className="w-full lg:w-[32%] border rounded-md shadow-md">
+    <article className="w-full lg:w-[32%] border rounded-md shadow-md">
       <div className="w-full relative text-sm bg-yellow-400 text-center border-b py-3 px-2 rounded-t-md shadow-sm">
         <p className="uppercase font-medium font-poppins text-left">Jugado</p>
         <p className="font-poppins font-light text-left capitalize">{moment(matchInfo.playDate).format('LLLL')}</p>
@@ -75,7 +75,7 @@ const MatchCard = (matchInfo: MatchCardProps): JSX.Element => {
           </p>
         )}
       </div>
-    </div>
+    </article>
   );
 }
 
