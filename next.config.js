@@ -4,6 +4,9 @@ const nextConfig = {
     GAME_API_URL: process.env.GAME_API_URL,
     PLAYER_API_URL: process.env.PLAYER_API_URL,
   },
+  experimental: {
+    serverActions: true,
+  },
 }
 
 module.exports = nextConfig

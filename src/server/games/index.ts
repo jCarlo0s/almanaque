@@ -1,3 +1,4 @@
+'use server'
 import fetchPlayers from "../players"
 import getJordanOnGame from "@/utils/getJordanOnGame"
 
