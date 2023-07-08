@@ -66,12 +66,12 @@ const MatchCard = (matchInfo: MatchCardProps): JSX.Element => {
             <strong>Jordan</strong> jugó en este encuentro
           </p>
           <p className='text-center font-poppins text-sm font-semibold mt-3'>
-             {matchInfo.jordan}
+             {matchInfo.jordan} ({(matchInfo.homeTeamScore > matchInfo.visitorTeamScore) ? matchInfo.homeTeam.abbreviation : matchInfo.visitorTeam.abbreviation})
           </p>
           </>
         ) : (
           <p className="text-center text-gray-500 font-poppins text-xs">
-            <strong>Jordan</strong> no estuvo presente en el juego
+            <strong>Jordan</strong> no estuvo presente en el encuentro
           </p>
         )}
       </div>
