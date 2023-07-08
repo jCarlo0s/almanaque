@@ -10,7 +10,7 @@ const Header = (): JSX.Element => {
         <Image
           data-testid="nba-logo"
           src='/logo/nba.png'
-          alt='Almanaque, los juegos más relevantes'
+          alt='Almanaque, los juegos más relevantes de la temporada 2019 - 2020 de la NBA'
           fill
         />
       </div>
