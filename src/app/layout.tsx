@@ -27,9 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={`${poppins.variable} ${roboto.className}`}>
         <Header />
-          <main className='p-2 container mx-auto pb-32 lg:pb-20'>
-            {children}
-          </main>
+        <main className='p-2 container mx-auto pb-32 lg:pb-20'>
+          {children}
+        </main>
       </body>
     </html>
   )
