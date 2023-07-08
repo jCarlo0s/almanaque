@@ -45,6 +45,7 @@ const fetchAllGames = async (
   ): Promise<DataResponse> => {
   try {
     const url = (params.pageNumber) ? `${process.env.GAME_API_URL}?seasons[]=2019&page=${params.pageNumber}` : `${process.env.GAME_API_URL}?seasons[]=2019`;
+    console.log(url)
     const response = await fetch(url);
     const gamesList = await response.json();
 
