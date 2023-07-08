@@ -43,8 +43,6 @@ describe("GameList Component", () => {
         total_count: 1
       }
     }
-
-    fetchAllGames = jest.fn(() => Promise.resolve(games));
   });
 
   it("render the game list", () => {
