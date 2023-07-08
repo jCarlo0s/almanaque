@@ -45,7 +45,6 @@ const fetchAllGames = async (
   ): Promise<DataResponse> => {
   try {
     const url = (params.pageNumber) ? `${process.env.GAME_API_URL}?seasons[]=2019&page=${params.pageNumber}` : `${process.env.GAME_API_URL}?seasons[]=2019`;
-    console.log(url)
     const response = await fetch(url);
     const gamesList = await response.json();
 
@@ -53,7 +52,8 @@ const fetchAllGames = async (
     const playersResponse =  await fetchPlayers();
 
     gamesList.data.forEach((game: GameObject) => {
-      const wasJordanOnGame = getJordanOnGame(game, playersResponse.data);
+      const winnerTeam = (game.home_team_score > game.visitor_team_score) ? game.home_team : game.visitor_team;
+      const wasJordanOnGame = getJordanOnGame(winnerTeam, playersResponse.data);
       if (wasJordanOnGame.isPresent) {
         game['jordan'] = wasJordanOnGame.playerName;
       } else {

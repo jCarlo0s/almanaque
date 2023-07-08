@@ -1,4 +1,4 @@
-import { GameObject } from "@/server/games";
+import { TeamInfo } from "@/server/games";
 import { PlayerInfo } from "@/server/players";
 
 export interface JordanOnGameResponse {
@@ -7,14 +7,14 @@ export interface JordanOnGameResponse {
 }
 
 const getJordanOnGame = (
-    game: GameObject,
+    team: TeamInfo,
     playersList: Array<PlayerInfo>): JordanOnGameResponse => {
       
       let isPresent = false;
       let playerName = '';
       
       const player = playersList.find((player) => {
-        if (player.team.id === game.home_team.id || player.team.id === game.visitor_team.id) {
+        if (player.team.id === team.id) {
           return true;
         }
       });
